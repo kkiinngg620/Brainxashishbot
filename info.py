@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'AutofilterBot')
-API_ID = int(environ.get('API_ID', '27157998'))
-API_HASH = environ.get('API_HASH', '45d09c93e37c9b93b6535949c898f906')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5772790410:AAHc77rHJexkbVZiaLrv0CJed3qo9OzBnjE")
+API_ID = int(environ.get('API_ID', '28231825'))
+API_HASH = environ.get('API_HASH', 'a17f66efeefa8d64724b2e380e7054ba')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6609268345:AAEoinW351JUExxF7vv1r_hOdF19ci6kHCY")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -22,32 +22,32 @@ PORT = environ.get("PORT", "8080")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/fbf4efda024d766f755a4.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/4c33584883856ce6ebd7e.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1452198353').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001532961331').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1452198353 6032339203').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001953164960').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001856835711')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001812429033')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Closter0:closter123@cluster0.ia3u0ir.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Closter0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://ashupatil62611:v7EIBk3VyR0Ns8JL@cluster0.vbt87w3.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "ashupatil62611")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001637368751'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001513506760'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'moviieeadda3')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>Title:</b> <code>{file_caption}</code>\n\n⚡<b>File uploaded by [Movies Adda™](https://t.me/moviieeadda3)</b> \n\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n👉 <b>Join Now : @moviieeadda3</b> 👈")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>Title:</b> <code>{file_caption}</code> @moviieeadda3 \n\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n👉 <b>Join Now : @moviieeadda3</b> 👈")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n<b>‌‌‌‌IMDb Data by: @moviieeadda3 </b> \n\n<b>🍿 Title: {title}</b>\n<b>🌟 Rating : {rating}/10</b>\n<b>🎭 Genres: {genres}</b>\n<b>📆 Year: {year}</b>\n<b>⏰ Duration : {runtime} minutes</b>\n\n<b>♥️ Please Share Us ♥️</b>")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>Title:</b> <code>{file_caption}</code>\n\n⚡<b>File uploaded by [Movies Adda™](https://t.me/Mhubnetwork)</b> \n\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n👉 <b>Join Now : @Mhubnetwork</b> 👈")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>Title:</b> <code>{file_caption}</code> @Mhubnetwork \n\n⚙️ <b>Size: </b><i>{file_size}</i>\n\n👉 <b>Join Now : @Mhubnetwork</b> 👈")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n<b>‌‌‌‌IMDb Data by: @Mhubnetwork </b> \n\n<b>🍿 Title: {title}</b>\n<b>🌟 Rating : {rating}/10</b>\n<b>🎭 Genres: {genres}</b>\n<b>📆 Year: {year}</b>\n<b>⏰ Duration : {runtime} minutes</b>\n\n<b>♥️ Please Share Us ♥️</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
@@ -71,7 +71,7 @@ LAZY_MODE = bool(environ.get("LAZY_MODE", "true"))
 lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '1452198353').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
 # Only Give Value in LAZY_RENAMERS if you have enabled LAZY_MODE ----- !
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1001988418193'))
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1001952444010'))
 #   REQ_CHANNEL is for the logs of that content name which is not found in group -- !
 URL_MODE = is_enabled((environ.get("URL_MODE", "False")), True)
 # Use True false in url mode => Set value true if you want shortlinks - else - use value False ----- !
